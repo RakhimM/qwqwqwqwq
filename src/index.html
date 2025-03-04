@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загрузчик расписания преподавателей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Загрузчик расписания преподавателей</h1>
+
+        <!-- File upload -->
+        <div id="file-upload-section">
+            <input type="file" id="file-input" multiple accept=".xlsx, .xls" />
+            <button id="upload-btn">Загрузить файлы</button>
+        </div>
+
+        <div id="loading" style="display:none;">
+            <img src="loading.gif" alt="Загрузка...">
+        </div>
+
+        <div id="selected-files"></div>
+
+        <!-- Filter section -->
+        <div id="filters-section" style="display:none;">
+            <h2>Фильтрация</h2>
+            <div id="filters">
+                <!-- Dynamic filter options will be appended here -->
+            </div>
+            <button id="apply-filters">Применить фильтры</button>
+            <button id="reset-filters">Сбросить фильтры</button>
+        </div>
+
+        <!-- Schedule table -->
+        <div id="schedule-table-container" style="display:none;">
+            <table id="schedule-table">
+                <!-- Dynamic table rows will be added here -->
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
